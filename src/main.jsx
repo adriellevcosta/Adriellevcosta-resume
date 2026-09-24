@@ -127,8 +127,32 @@ function App() {
                   <div className="tag-list">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div>
                 </div>
                 <div className="project-bottom">
-                  <span>{project.link ? <a href={project.link} target="_blank" rel="noreferrer">{project.award}</a> : project.award}</span>
-                  {project.link ? <a href={project.link} target="_blank" rel="noreferrer"><ArrowUpRight size={19}/></a> : <ArrowUpRight size={19}/>}
+                  <span>
+                    {project.link ? (
+                      <a href={project.link} target="_blank" rel="noreferrer">
+                        {project.award}
+                      </a>
+                    ) : (
+                      project.award
+                    )}
+                
+                    {project.zenodo && (
+                      <>
+                        {" · "}
+                        <a href={project.zenodo} target="_blank" rel="noreferrer">
+                          VIEW ON ZENODO
+                        </a>
+                      </>
+                    )}
+                  </span>
+                
+                  {project.link ? (
+                    <a href={project.link} target="_blank" rel="noreferrer">
+                      <ArrowUpRight size={19}/>
+                    </a>
+                  ) : (
+                    <ArrowUpRight size={19}/>
+                  )}
                 </div>
               </article>
             ))}
