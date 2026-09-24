@@ -182,3 +182,19 @@ h3 { font-size:clamp(35px,4vw,54px); line-height:1; letter-spacing:-.06em; margi
   .contact { padding-top:100px; }
 }
 .paper-link{display:inline-flex;align-items:center;gap:7px;margin-top:22px;color:var(--accent);font:10px "DM Mono",monospace}.paper-link:hover{text-decoration:underline}.learning-section{padding-top:100px;padding-bottom:100px}.learning-grid{margin-top:55px;display:grid;grid-template-columns:1fr 1fr;gap:100px}.learning-grid p{color:var(--muted);font-size:14px;line-height:1.8;max-width:520px}.learning-grid p+p{margin-top:25px}.skill-info{display:flex;align-items:center;gap:13px}.skill-info img{width:23px;height:23px;object-fit:contain;filter:grayscale(1);opacity:.8}.skill:hover .skill-info img{filter:none;opacity:1}@media(max-width:850px){.learning-grid{grid-template-columns:1fr;gap:30px}}
+
+.project-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
