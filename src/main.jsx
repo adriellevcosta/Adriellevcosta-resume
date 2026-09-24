@@ -6,7 +6,7 @@ import "./styles.css";
 const projects = [
   {number:"01",title:"Robot Launcher Race",type:"Interdisciplinary Team Project",award:"1ST PLACE",description:"A microcontroller driven mobile robot with line following sensors, gyroscope based orientation control, and collision detection for an autonomous navigation challenge.",tags:["C","Sensors","Control","Embedded"],icon:<Cpu size={28} strokeWidth={1.5}/>,link:null},
   {number:"02",title:"RC Boat",type:"Embedded Control & Navigation",award:"WATCH THE BUILD",description:"A custom 3D printed hull with a jet style DC motor propulsion assembly and Arduino controlled motor speed and servo driven steering.",tags:["Arduino","3D Printing","CAD","Embedded"],icon:<Waves size={28} strokeWidth={1.5}/>,link:"https://youtu.be/EIevH93PdFA?si=oTXljkwuFR0AjCkv"},
-  {number:"03",title:"Earthquake Simulator",type:"C Programming Project",award:"WATCH THE DEMO",description:"A C program that simulates earthquake motion and demonstrates how software can model physical behavior.",tags:["C","Simulation","Programming"],icon:<Terminal size={28} strokeWidth={1.5}/>,link:"https://youtu.be/c-yZX7f1LR0?si=JtdahhgRQ6dmADbi"},
+  {number:"03",title:"Earthquake Simulator",type:"C Programming Project",award:"WATCH THE DEMO",description:"A C program that simulates earthquake motion and demonstrates how software can model physical behavior.",tags:["C","Simulation","Programming"],icon:<Terminal size={28} strokeWidth={1.5}/>,link:"https://youtu.be/c-yZX7f1LR0?si=JtdahhgRQ6dmADbi",zenodo:"https://zenodo.org/records/22926999"},
 ];
 
 const skills = [
