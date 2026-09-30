@@ -10,7 +10,7 @@ const projects = [
 ];
 
 const skills = [
-  ["Python","Primary language","https://cdn.simpleicons.org/python"],["C","Embedded","https://cdn.simpleicons.org/c"],["Java","Programming","https://cdn.simpleicons.org/openjdk"],["Arduino","Microcontrollers","https://cdn.simpleicons.org/arduino"],["Docker","Systems","https://cdn.simpleicons.org/docker"],["MQTT","Messaging","https://cdn.simpleicons.org/mqtt"],["MATLAB","Modeling","https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg"],["GitHub","Development","https://cdn.simpleicons.org/github"],["AutoCAD","Hardware","https://cdn.simpleicons.org/autocad"],["KiCad","PCB design","https://cdn.simpleicons.org/kicad"],
+  ["Python","Primary language","https://cdn.simpleicons.org/python"],["C","Embedded","https://cdn.simpleicons.org/c"],["Java","Programming","https://cdn.simpleicons.org/openjdk"],["Arduino","Microcontrollers","https://cdn.simpleicons.org/arduino"],["Docker","Systems","https://cdn.simpleicons.org/docker"],["MQTT","Messaging","https://cdn.simpleicons.org/mqtt"],["MATLAB","Modeling","https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg"],["GitHub","Development","https://cdn.simpleicons.org/github"],["Unity","Software","https://cdn.simpleicons.org/unity"],["Autodesk Fusion","PCB design","https://cdn.simpleicons.org/autodesk"],
 ];
 
 function App() {
