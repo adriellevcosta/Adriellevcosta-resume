@@ -1,12 +1,14 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { ArrowUpRight, Github, Linkedin, Mail, Cpu, Waves, Terminal, Menu, X } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Mail, Cpu, Waves, Terminal, Ruler, Droplets, Menu, X } from "lucide-react";
 import "./styles.css";
 
 const projects = [
   {number:"01",title:"Robot Launcher Race",type:"Interdisciplinary Team Project",award:"1ST PLACE",description:"A microcontroller driven mobile robot with line following sensors, gyroscope based orientation control, and collision detection for an autonomous navigation challenge.",tags:["C","Sensors","Control","Embedded"],icon:<Cpu size={28} strokeWidth={1.5}/>,link:null},
   {number:"02",title:"RC Boat",type:"Embedded Control & Navigation",award:"WATCH THE BUILD",description:"A custom 3D printed hull with a jet style DC motor propulsion assembly and Arduino controlled motor speed and servo driven steering.",tags:["Arduino","3D Printing","CAD","Embedded"],icon:<Waves size={28} strokeWidth={1.5}/>,link:"https://youtu.be/EIevH93PdFA?si=oTXljkwuFR0AjCkv"},
   {number:"03",title:"Earthquake Simulator",type:"C Programming Project",award:"WATCH THE DEMO",description:"A C program that simulates earthquake motion and demonstrates how software can model physical behavior.",tags:["C","Simulation","Programming"],icon:<Terminal size={28} strokeWidth={1.5}/>,link:"https://youtu.be/c-yZX7f1LR0?si=JtdahhgRQ6dmADbi",zenodo:"https://zenodo.org/records/22926999"},
+  {number:"04",title:"Ultrasonic Rangefinder",type:"Embedded Systems Project",award:"",description:"An MSP430G2553 based rangefinder that measures distance with an ultrasonic sensor and displays the result in millimeters and inches on an I2C LCD. The integrated system also reads a potentiometer to adjust LED brightness and blinks an indicator LED.",tags:["C","MSP430G2553","HC-SR04","I2C LCD","ADC"],icon:<Ruler size={28} strokeWidth={1.5}/>,link:null},
+  {number:"05",title:"Automatic Plant Watering System",type:"Electronics Prototype",award:"",description:"A 5V automatic watering prototype that uses a soil moisture sensor to detect dry soil. The sensor signal controls a relay module, which switches power to a mini water pump to deliver water when needed.",tags:["Soil Moisture Sensor","LM393","Relay Module","Water Pump","5V Electronics"],icon:<Droplets size={28} strokeWidth={1.5}/>,link:null},
 ];
 
 const skills = [
