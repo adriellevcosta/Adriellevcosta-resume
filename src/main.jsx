@@ -15,10 +15,59 @@ const skills = [
   ["Python","Primary language","https://cdn.simpleicons.org/python"],["C","Embedded","https://cdn.simpleicons.org/c"],["Java","Programming","https://cdn.simpleicons.org/openjdk"],["Arduino","Microcontrollers","https://cdn.simpleicons.org/arduino"],["Docker","Systems","https://cdn.simpleicons.org/docker"],["MQTT","Messaging","https://cdn.simpleicons.org/mqtt"],["MATLAB","Modeling","https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg"],["GitHub","Development","https://cdn.simpleicons.org/github"],["Unity","Software","https://cdn.simpleicons.org/unity"],["Autodesk Fusion","PCB design","https://cdn.simpleicons.org/autodesk"],
 ];
 
+const projectGalleries = {
+  rangefinder: {
+    title: "Ultrasonic Rangefinder",
+    subtitle: "From breadboard prototype to custom PCB.",
+    photos: [
+      { file: "rangefinderBreadboardPrototype.jpg", caption: "Breadboard prototype with the MSP430 and LCD." },
+      { file: "rangefinder3.jpg", caption: "Assembled custom PCB." },
+      { file: "rangefinder2.jpg", caption: "PCB layout and routing." },
+    ],
+  },
+  watering: {
+    title: "Automatic Plant Watering System",
+    subtitle: "A soil moisture controlled watering prototype.",
+    photos: [
+      { file: "AutoPlantWater.jpg", caption: "Soil moisture sensor, pump, and plant setup." },
+      { file: "AutoPlantWater1.jpg", caption: "Full watering system arrangement." },
+    ],
+  },
+};
+
 function App() {
   const [menuOpen, setMenuOpen] = React.useState(false);
+  const [gallery, setGallery] = React.useState(() => window.location.hash.replace("#gallery-", ""));
+
+  React.useEffect(() => {
+    const syncGallery = () => setGallery(window.location.hash.startsWith("#gallery-") ? window.location.hash.replace("#gallery-", "") : "");
+    window.addEventListener("hashchange", syncGallery);
+    return () => window.removeEventListener("hashchange", syncGallery);
+  }, []);
 
   const closeMenu = () => setMenuOpen(false);
+
+  if (projectGalleries[gallery]) {
+    const selectedGallery = projectGalleries[gallery];
+    return (
+      <main className="gallery-page">
+        <a className="gallery-back" href="#projects" onClick={() => setGallery("")}>← BACK TO PROJECTS</a>
+        <header className="gallery-heading">
+          <p className="eyebrow">PROJECT GALLERY</p>
+          <h1>{selectedGallery.title}</h1>
+          <p>{selectedGallery.subtitle}</p>
+        </header>
+        <div className="gallery-grid">
+          {selectedGallery.photos.map((photo) => (
+            <figure className="gallery-photo" key={photo.file}>
+              <img src={`${import.meta.env.BASE_URL}images/${photo.file}`} alt={photo.caption} />
+              <figcaption>{photo.caption}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </main>
+    );
+  }
 
   return (
     <div className="site">
@@ -130,6 +179,12 @@ function App() {
                 </div>
                 <div className="project-bottom">
                   <span>
+                    {project.number === "04" && (
+                      <a className="gallery-link" href="#gallery-rangefinder">VIEW PROJECT GALLERY <ArrowUpRight size={14} /></a>
+                    )}
+                    {project.number === "05" && (
+                      <a className="gallery-link" href="#gallery-watering">VIEW PROJECT GALLERY <ArrowUpRight size={14} /></a>
+                    )}
                     {project.link ? (
                       <a href={project.link} target="_blank" rel="noreferrer">
                         {project.award}
